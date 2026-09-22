@@ -1,0 +1,148 @@
+import type { Employee } from "@/types";
+
+export const employees: Employee[] = [
+  {
+    id: "emp-001",
+    employeeNo: "TGS-0018",
+    name: "Maria Lourdes Santos",
+    initials: "MS",
+    position: "Station Supervisor",
+    department: "Operations",
+    station: "Poblacion Trinidad",
+    dateHired: "May 12, 2019",
+    dateRegularized: "Nov 12, 2019",
+    contractEnd: "Dec 31, 2026",
+    status: "Active",
+    monthlySalary: 38400,
+    violations: 0,
+    leave: { sick: 18.5, vacation: 7, force: 3 },
+  },
+  {
+    id: "emp-002",
+    employeeNo: "TGS-0024",
+    name: "Joel Ramirez",
+    initials: "JR",
+    position: "Delivery Driver",
+    department: "Logistics",
+    station: "Panab-an",
+    dateHired: "Feb 03, 2021",
+    dateRegularized: "Aug 03, 2021",
+    contractEnd: "Oct 14, 2026",
+    status: "Active",
+    monthlySalary: 26750,
+    violations: 1,
+    leave: { sick: 11, vacation: 4.5, force: 1 },
+  },
+  {
+    id: "emp-003",
+    employeeNo: "TGS-0031",
+    name: "Christine Villamor",
+    initials: "CV",
+    position: "Cashier",
+    department: "Finance",
+    station: "Poblacion Trinidad",
+    dateHired: "Jul 18, 2022",
+    dateRegularized: "Jan 18, 2023",
+    contractEnd: "Nov 30, 2026",
+    status: "Active",
+    monthlySalary: 24500,
+    violations: 0,
+    leave: { sick: 15, vacation: 8, force: 5 },
+  },
+  {
+    id: "emp-004",
+    employeeNo: "TGS-0039",
+    name: "Arnel Dela Cruz",
+    initials: "AD",
+    position: "LPG Technician",
+    department: "Technical",
+    station: "Panab-an",
+    dateHired: "Jan 08, 2024",
+    dateRegularized: "Jul 08, 2024",
+    contractEnd: "Sep 30, 2026",
+    status: "Active",
+    monthlySalary: 29800,
+    violations: 2,
+    leave: { sick: 12, vacation: 6, force: 2 },
+  },
+  {
+    id: "emp-005",
+    employeeNo: "TGS-0012",
+    name: "Leah Gonzales",
+    initials: "LG",
+    position: "Administrative Assistant",
+    department: "Administration",
+    station: "Poblacion Trinidad",
+    dateHired: "Mar 21, 2018",
+    dateRegularized: "Sep 21, 2018",
+    contractEnd: "—",
+    status: "Resigned",
+    separationDate: "Aug 16, 2026",
+    monthlySalary: 28300,
+    violations: 0,
+    leave: { sick: 0, vacation: 0, force: 0 },
+  },
+  {
+    id: "emp-006",
+    employeeNo: "TGS-0044",
+    name: "Nico Flores",
+    initials: "NF",
+    position: "Warehouse Aide",
+    department: "Inventory",
+    station: "Panab-an",
+    dateHired: "Apr 11, 2025",
+    dateRegularized: "Oct 11, 2025",
+    contractEnd: "Dec 15, 2026",
+    status: "Active",
+    monthlySalary: 22100,
+    violations: 0,
+    leave: { sick: 14, vacation: 9, force: 4 },
+  },
+];
+
+export const deductionTypes = [
+  "CBU",
+  "Retirement",
+  "TIMGAS Loan",
+  "Express",
+  "Pag-IBIG",
+  "Pag-IBIG Loan",
+  "Savings",
+  "Motor Loan",
+  "Housing Loan",
+  "Absences",
+  "Gasoline",
+  "Late deductions",
+  "Other manual deduction",
+];
+
+export const payrollRows = [
+  { employee: "Maria Lourdes Santos", station: "Poblacion Trinidad", gross: 20840, deductions: 2180, adjustments: 1250, net: 19910, status: "Ready" },
+  { employee: "Joel Ramirez", station: "Panab-an", gross: 14550, deductions: 3120, adjustments: 820, net: 12250, status: "Review" },
+  { employee: "Christine Villamor", station: "Poblacion Trinidad", gross: 12250, deductions: 1450, adjustments: 0, net: 10800, status: "Ready" },
+  { employee: "Arnel Dela Cruz", station: "Panab-an", gross: 16120, deductions: 2690, adjustments: 1100, net: 14530, status: "Review" },
+  { employee: "Nico Flores", station: "Panab-an", gross: 11050, deductions: 975, adjustments: 0, net: 10075, status: "Ready" },
+];
+
+export const leaveRows = [
+  { employee: "Maria Lourdes Santos", type: "Vacation leave", dates: "Sep 28–29, 2026", days: 2, balance: 7, status: "Pending" },
+  { employee: "Joel Ramirez", type: "Sick leave", dates: "Sep 18, 2026", days: 1, balance: 11, status: "Approved" },
+  { employee: "Arnel Dela Cruz", type: "Force leave", dates: "Sep 12, 2026", days: 1, balance: 2, status: "Approved" },
+  { employee: "Christine Villamor", type: "Vacation leave", dates: "Oct 03, 2026", days: 1, balance: 8, status: "Pending" },
+];
+
+export const violations = [
+  { id: "V-026", employee: "Arnel Dela Cruz", category: "Safety procedure", date: "Sep 08, 2026", action: "Written reminder", status: "Open" },
+  { id: "V-025", employee: "Joel Ramirez", category: "Late arrival", date: "Aug 21, 2026", action: "Verbal warning", status: "Resolved" },
+  { id: "V-024", employee: "Arnel Dela Cruz", category: "Equipment handling", date: "Jun 14, 2026", action: "Retraining completed", status: "Resolved" },
+];
+
+export const contracts = [
+  { employee: "Arnel Dela Cruz", station: "Panab-an", end: "Sep 30, 2026", days: 8, type: "Fixed term", status: "Urgent" },
+  { employee: "Joel Ramirez", station: "Panab-an", end: "Oct 14, 2026", days: 22, type: "Fixed term", status: "Due soon" },
+  { employee: "Christine Villamor", station: "Poblacion Trinidad", end: "Nov 30, 2026", days: 69, type: "Fixed term", status: "Current" },
+  { employee: "Nico Flores", station: "Panab-an", end: "Dec 15, 2026", days: 84, type: "Probationary", status: "Current" },
+];
+
+export const formatMoney = (value: number) =>
+  new Intl.NumberFormat("en-PH", { style: "currency", currency: "PHP", maximumFractionDigits: 2 }).format(value);
